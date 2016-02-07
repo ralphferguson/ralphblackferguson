@@ -45,6 +45,7 @@ box-shadow: 0px 0px 42px -9px rgba(0,0,0,0.5);
 
 #text {
 	padding: 15px;
+	padding-top: 8px;
 	text-align: center;
 
 	vertical-align: top;
@@ -54,21 +55,23 @@ h1 {
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 500;
+	font-weight: 100;
 	line-height: 26.4px;
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 17px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 15.4px;
 	opacity: 0.7;
+	line-height: 25px;
 }
 
 p {
-	line-height: 2px;
+	line-height: 0px;
+	font-size: 15px;
 }
 
 td {
