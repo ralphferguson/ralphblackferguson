@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Local</title>
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+<script type="text/babel">
+
+//qa.js
+
+const qa = [
+  {
+    question: "What is react?",
+    answer:
+      "React is a JavaScript library used to build views which are mainly concentrated on the view part in the MVC model."
+  },
+  {
+    question: "What is JSX ?",
+    answer:
+      "JSX is JavaScript XML which is used inside the react to write the HTML like syntax inside the javascript it’s just a preprocessor. The jsx we write later converts into the JavaScript with the help of babel."
+  },
+  {
+    question: "What is Nodejs  ?",
+    answer:
+      "Nodejs is a backend JavaScript framework built on top of v8 JavaScript engine. By using node js you can be built any kind of backend stuff."
+  },
+  {
+    question: "What is npm ?",
+    answer:
+      "npm is a node package manager which is used to install the libraries created by the other people. By using npm you can install or uninstall packages at any point in time."
+  },
+  {
+    question: "What is react ?",
+    answer: "A JavaScript library for building user interfaces"
+  }
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//app.js
+
+class Accordion extends React.Component {
+
+  state = {
+    currentIndex: -1
+  };
+
+  handleChange= i => {
+    this.setState({
+      currentIndex:i
+    })
+  };
+
+  render() {
+    const { handleChange } = this;
+    const { currentIndex } = this.state;
+
+
+    return (
+      <div>
+      {qa.map (function(e,i) {
+        return (<List
+        question={e.question}
+        answer={e.answer}
+        handleChange={handleChange}
+        key={i}
+        index = {i}
+        currentIndex={currentIndex}
+        />);
+      })}
+
+      </div>
+    );
+  }
+}
+
+
+
+
+
+//list.js
+
+function List(props) {
+  let current = props.currentIndex === props.index;
+  return (
+    <ul className="holder">
+      <li
+      className="question"
+      onClick={()=>props.handleChange (props.index)}>{props.question}</li>
+      <li className={current ? "answer open" : "answer" }>{current && <p>{props.answer}</p>}</li>
+    </ul>
+  );
+}
+
+
+
+
+
+
+
+//index.js
+
+
+ReactDOM.render(<Accordion/>,document.getElementById('root'))
+
+</script>
+
+</body>
+
+</html>
