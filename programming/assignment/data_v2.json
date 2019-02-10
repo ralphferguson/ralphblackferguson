@@ -1,0 +1,25 @@
+[
+{
+  "name": "Bedroom",
+  "temperature": 21,
+  "humidity": 20
+},
+
+{
+  "name": "Bathroom",
+  "temperature": 21,
+  "humidity": 20
+},
+
+{
+  "name": "Lounge",
+  "temperature": 21,
+  "humidity": 20
+},
+
+{
+  "name": "Living room",
+  "temperature": 21,
+  "humidity": 20
+}
+]
