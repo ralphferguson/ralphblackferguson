@@ -1,0 +1,23 @@
+"room1": {
+  "name": "Bedroom",
+  "temperature": 21,
+  "humidity": 20
+}
+
+"room2": {
+  "name": "Bathroom",
+  "temperature": 21,
+  "humidity": 20
+}
+
+"room3": {
+  "name": "Lounge",
+  "temperature": 21,
+  "humidity": 20
+}
+
+"room4": {
+  "name": "Living room",
+  "temperature": 21,
+  "humidity": 20
+}
