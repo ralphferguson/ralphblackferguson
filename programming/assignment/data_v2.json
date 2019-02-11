@@ -1,25 +1,25 @@
 [
 {
   "name": "Bedroom",
-  "temperature": 21,
-  "humidity": 20
+  "temperature": 20,
+  "humidity": 40
 },
 
 {
   "name": "Bathroom",
-  "temperature": 21,
-  "humidity": 20
+  "temperature": 29,
+  "humidity": 18
 },
 
 {
   "name": "Lounge",
-  "temperature": 21,
-  "humidity": 20
+  "temperature": 25,
+  "humidity": 30
 },
 
 {
   "name": "Living room",
-  "temperature": 21,
-  "humidity": 20
+  "temperature": 30,
+  "humidity": 50
 }
 ]
