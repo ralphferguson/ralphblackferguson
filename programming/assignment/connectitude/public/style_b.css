@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-color: #577b98;
+}
+
+.menu {
+  display: none;
+/*  min-width: 30px;
+  min-height: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;*/
+}
+
+.container {
+  padding: 0 0 30px;
+  margin: 0 auto;
+}
+
+.select_room {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #fff;
+  color: #577b98;
+}
+.select_room select {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  background-color: #fff;
+  border: none;
+  color: #577b98;
+}
+
+.select_room select:focus {
+  outline: none;
+}
+
+.select_room option {
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/*
+.select_room::after {
+  content: ' V';
+  font-size: 12px;
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
+  color: #a6a6a6;
+}*/
+
+.display_circle {
+
+}
+
+.temp, .humidity {
+  vertical-align: middle;
+  font-size: 100px;
+  font-weight: 100;
+  color: #ffffff;
+  position: relative;
+  left: 32px;
+}
+
+.temp:after {
+  content: '°C';
+  font-size: 30px;
+  vertical-align: top;
+  position: relative;
+  left: -5px;
+  top: 25px;
+ letter-spacing: -2px;
+ color: #577b98;
+}
+
+.humidity:after {
+  content: '%';
+  font-size: 58px;
+  vertical-align: top;
+  position: relative;
+  left: 2px;
+  top: 30px;
+ letter-spacing: -2px;
+ color: #577b98;
+}
+
+.temp::before {
+  background-image: url(./images/icon_temp_3.png);
+background-repeat: no-repeat;
+background-size: 30px;
+width: 150px;
+height: 150px;
+display: inline-block;
+content: "";
+top: 30px;
+position: absolute;
+left: 200px;
+}
+
+
+.humidity::before {
+  background-image: url(./images/icon_drop_3.png);
+background-repeat: no-repeat;
+background-size: 40px;
+width: 150px;
+height: 150px;
+display: inline-block;
+content: "";
+top: 30px;
+position: absolute;
+left: 195px;
+}
+
+/*
+.humidity {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 100px;
+  font-weight: 100;
+  color: #3e3e3e;
+  position: relative;
+  left: 32px;
+}
+
+.humidity::after {
+  content: '%';
+}
+
+.humidity::before {
+  background-image: url('./images/icon_drop.png');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 18px;
+  display: inline-block;
+  content: "";
+  top: 4px;
+  left: -2px;
+  position: relative;
+}*/
+
+.chart_container {
+  padding: 30px 0;
+  background-color: #577b98;
+}
+
+.chart_container::before {
+  content: '';
+  background-color: #577b98;
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  top: -45px;
+}
+
+.chart img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.days {
+  padding: 10px 0 0;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.days span {
+  padding: 0 15px;
+}
+
+.chart_container::after {
+  content: "© Ralph Black Ferguson's Connectitude Application";
+  color: #b3b3b3;
+  font-size: 10px;
+  position: relative;
+  bottom: -80px;
+  background-color: #fff;
+  padding: 20px 20px 30px;
+  display: block;
+  text-align: center;
+}
+
+.version_select {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.version_select button {
+  /*background-color: #4CAF50;
+  background-image: linear-gradient(white, white, white, white, lightgrey);*/
+  background-color: transparent;
+  border: none;
+  color: #3e3e3e;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif!important;
+}
+.version_select button:focus {
+  outline: none;
+}
+
+#css_b {
+  background-image: linear-gradient(#e4f2ff, #e4f2ff, #e4f2ff, #e4f2ff, lightgrey);
+  color: #3e3e3e;
+  border-radius: 10px 10px 0 0;
+}
+
+.menu_gradient {
+  background-image: linear-gradient(#fff, #fff, #fff, #fff, lightgrey);
+}
+
+@media only screen and (max-width: 550px) {
+  .chart img {
+    width: 80%;
+  }
+  .days {
+    font-size: 18px;
+    color: #577b98;
+    text-align: center;
+  }
+  .days span {
+    padding: 0 12px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+.temp::before {
+  display: none;
+}
+.humidity::before {
+  display: none;
+}
+}
