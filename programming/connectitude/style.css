@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.menu {
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url('./images/menu.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+}
+
+.app_container {
+  background-image: url('./images/logo.png');
+  background-repeat: no-repeat;
+  background-size: 120px;
+  position: relative;
+  background-position-x: center;
+}
+
+.container {
+  padding: 30px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.select_room {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #e4f2ff;
+  color: #577b98;
+}
+.select_room select {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: #577b98;
+}
+
+.select_room select:focus {
+  outline: none;
+}
+
+.select_room option {
+  font-size: 14px;
+}
+
+/*
+.select_room::after {
+  content: ' V';
+  font-size: 12px;
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
+  color: #a6a6a6;
+}*/
+
+.display_circle {
+  display: table;
+  top: 40px;
+  position: relative;
+  width: 260px;
+  height: 260px;
+  background-image: url('./images/background.png');
+  background-repeat: no-repeat;
+  background-size: 260px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.temp {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 100px;
+  color: #577b98;
+  position: relative;
+  left: 32px;
+}
+
+.temp:after {
+  content: '°C';
+  font-size: 30px;
+  vertical-align: top;
+  position: relative;
+  left: -5px;
+  top: 25px;
+ letter-spacing: -2px;
+ color: #577b98;
+}
+
+.temp::before {
+  background-image: url('./images/icon_temp.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 25px;
+  height: 50px;
+  display: inline-block;
+  content: "";
+  top: -8px;
+  position: relative;
+}
+
+
+.humidity {
+  position: relative;
+  top: 225px;
+  left: -235px;
+  color: #577b98;
+  font-size: 22px;
+}
+
+.humidity::after {
+  content: '%';
+}
+
+.humidity::before {
+  background-image: url('./images/icon_drop.png');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 18px;
+  display: inline-block;
+  content: "";
+  top: 4px;
+  left: -2px;
+  position: relative;
+}
+
+.chart_container {
+  padding: 30px 0;
+  background-color: #e4f2ff;
+}
+
+.chart_container::before {
+  content: '';
+  background-color: #577b98;
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  top: -45px;
+}
+
+.chart img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.days {
+  padding: 10px 0 0;
+  font-size: 22px;
+  color: #577b98;
+  text-align: center;
+}
+
+.days span {
+  padding: 0 15px;
+}
+
+.chart_container::after {
+  content: "© Ralph Black Ferguson's Connectitude Application";
+  color: #b3b3b3;
+  font-size: 10px;
+  position: relative;
+  bottom: -80px;
+  background-color: #fff;
+  padding: 20px 20px 30px;
+  display: block;
+  text-align: center;
+}
+
+.version_select {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.version_select button {
+  /*background-color: #4CAF50;
+  background-image: linear-gradient(white, white, white, white, lightgrey);*/
+  background-color: transparent;
+  border: none;
+  color: #3e3e3e;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+.version_select button:focus {
+  outline: none;
+}
+
+#css {
+  background-image: linear-gradient(#e4f2ff, #e4f2ff, #e4f2ff, #e4f2ff, lightgrey);
+  color: #3e3e3e;
+  border-radius: 10px 10px 0 0;
+}
+
+.menu_gradient {
+  background-image: linear-gradient(white, white, white, white, lightgrey);
+}
+
+@media only screen and (max-width: 550px) {
+  .chart img {
+    width: 80%;
+  }
+  .days {
+    font-size: 18px;
+    color: #577b98;
+    text-align: center;
+  }
+  .days span {
+    padding: 0 12px;
+  }
+}
